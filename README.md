@@ -1,8 +1,8 @@
-<header style="text-align: center;">
-    <h1>🏛️<br>Museum</h1>
+<div align="center">
+  <h1>🏛️<br>Museum</h1>
     
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-</header>
+</div>
 
 Front-end design systems can get messy; Especially with many different tools working together in modern development toolchains.
 
