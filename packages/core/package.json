@@ -1,0 +1,44 @@
+{
+    "name": "@museum/core",
+    "main": "dist/museum-core.js",
+    "version": "0.0.1",
+    "license": "MIT",
+    "files": [
+        "dist/*"
+    ],
+    "scripts": {
+        "lint": "eslint ./ --ext .js",
+        "lint:fix": "yarn lint --fix",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "build": "NODE_ENV=production webpack",
+        "pre-commit": "yarn lint && yarn test && yarn build"
+    },
+    "lint-staged": {
+        "src/**/*.{js}": [
+          "yarn lint:fix",
+          "git add"
+        ]
+    },
+    "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/preset-env": "^7.9.0",
+        "babel-eslint": "^10.1.0",
+        "babel-jest": "^25.2.3",
+        "babel-plugin-webpack-alias": "^2.1.2",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-base": "^14.1.0",
+        "eslint-config-prettier": "^6.10.1",
+        "eslint-import-resolver-webpack": "^0.12.1",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-jest": "^23.8.2",
+        "eslint-plugin-prettier": "^3.1.2",
+        "jest": "^25.2.4",
+        "prettier": "^2.0.2",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11"
+    },
+    "dependencies": {
+        "tailwindcss": "^1.2.0"
+    }
+}

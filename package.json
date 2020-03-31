@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "format-markdown": "prettier --write \"**/*.md\"",
+    "lint": "yarn workspaces run lint",
+    "test": "yarn workspaces run test",
+    "build": "yarn workspaces run build"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "@(.*)$": "<rootDir>/src/$1"
+    }
+  },
+  "lint-staged": {
+    "**/*.{md}": [
+      "yarn format-markdown"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn workspace @museum/core pre-commit",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.1.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.0"
+  }
+}

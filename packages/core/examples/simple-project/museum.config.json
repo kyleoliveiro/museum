@@ -1,0 +1,35 @@
+{
+    "tokens": [
+        {
+            "name": "spacing",
+            "tokens": [
+                {
+                    "name": "xs",
+                    "value": 4
+                }
+            ]
+        },
+        {
+            "name": "colors",
+            "tokens": [
+                {
+                    "name": "red",
+                    "value": "red"
+                },
+                {
+                    "name": "primary",
+                    "tokens": [
+                        {
+                            "name": "400",
+                            "value": "blue"
+                        },
+                        {
+                            "name": "800",
+                            "value": "darkblue"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
